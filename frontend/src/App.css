@@ -1,0 +1,111 @@
+/* ===== Root Layout ===== */
+#root {
+max-width: 1200px;
+margin: auto;
+padding: 2rem;
+text-align: center;
+font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ===== Logo Styling ===== */
+.logo {
+height: 5.5em;
+padding: 1.2em;
+transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.logo:hover {
+transform: scale(1.08);
+filter: drop-shadow(0 0 10px rgba(100, 108, 255, 0.5));
+}
+
+.logo.react:hover {
+filter: drop-shadow(0 0 12px rgba(97, 218, 251, 0.7));
+}
+
+/* ===== Logo Spin Animation ===== */
+@keyframes logo-spin {
+from {
+transform: rotate(0deg);
+}
+to {
+transform: rotate(360deg);
+}
+}
+
+/* Animate only if user allows motion */
+@media (prefers-reduced-motion: no-preference) {
+.logo.spin {
+animation: logo-spin infinite 18s linear;
+}
+}
+
+/* ===== Card Component ===== */
+.card {
+padding: 2rem;
+border-radius: 12px;
+background: #ffffff;
+box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+margin: 1.5rem 0;
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+transform: translateY(-5px);
+box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+}
+
+/* ===== Documentation Text ===== */
+.read-the-docs {
+color: #666;
+font-size: 0.9rem;
+margin-top: 10px;
+}
+
+/* ===== Tablet Devices ===== */
+@media (max-width: 992px) {
+#root {
+padding: 1.5rem;
+}
+
+.logo {
+height: 5em;
+}
+
+.card {
+padding: 1.5rem;
+}
+}
+
+/* ===== Mobile Devices ===== */
+@media (max-width: 600px) {
+#root {
+padding: 1rem;
+}
+
+.logo {
+height: 4em;
+padding: 1em;
+}
+
+.card {
+padding: 1.2rem;
+border-radius: 10px;
+}
+
+.read-the-docs {
+font-size: 0.8rem;
+}
+}
+
+/* ===== Large Screens ===== */
+@media (min-width: 1400px) {
+#root {
+max-width: 1400px;
+}
+
+.card {
+padding: 2.5rem;
+}
+}
+  
